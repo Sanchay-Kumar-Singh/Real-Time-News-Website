@@ -1,4 +1,4 @@
-const API_KEY = df0e0767b64844f5ab228a0f79c8c181;
+const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
 const BASE_URL = "https://newsapi.org/v2/everything?q=";
 
 /**
