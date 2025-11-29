@@ -8,12 +8,12 @@ const BASE_URL = "https://newsapi.org/v2/everything?q=";
 export async function fetchNews(query) {
   try {
     const res = await fetch(`${BASE_URL}${encodeURIComponent(query)}&apiKey=${API_KEY}`);
-    if (!res.ok) {
-      console.error("news api error", res.status, await res.text());
-      return [];
-    }
+    // if (!res.ok) {
+    //   console.error("news api error", res.status, await res.text());
+    //   return [];
+    // }
     const data = await res.json();
-    return data.articles || [];
+    return data.articles ;
   } catch (err) {
     console.error("fetch error", err);
     return [];
