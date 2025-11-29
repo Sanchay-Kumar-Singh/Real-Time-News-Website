@@ -19,7 +19,7 @@ export default function App() {
 
   useEffect(() => {
     loadNews("India");
-  }, []);
+  }, [query]);
 
   return (
     <div className="min-h-screen">
