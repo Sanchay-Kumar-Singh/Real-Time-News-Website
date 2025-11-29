@@ -52,7 +52,7 @@ import { fetchNews } from "./api/newsApi";
 
 export default function App() {
   const [articles, setArticles] = useState([]);
-  const [loading, setLoading] = useState(true); // start with true
+  const [loading, setLoading] = useState(false);
 
   async function loadNews(query = "India") {
     try {
