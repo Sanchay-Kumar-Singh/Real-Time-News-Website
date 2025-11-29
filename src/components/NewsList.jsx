@@ -1,8 +1,7 @@
 import NewsCard from "./NewsCard";
 
-export default function NewsList({ articles }) {
-
-  if (!articles) {
+export default function NewsList({ articles = [] }) {
+  if (!articles.length) {
     return <div className="py-10 text-center text-gray-600">No articles found.</div>;
   }
 
