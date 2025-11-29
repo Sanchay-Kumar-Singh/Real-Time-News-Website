@@ -25,11 +25,12 @@ export default function App() {
     <div className="min-h-screen">
       <Navbar onSearch={loadNews} />
       <main className="max-w-6xl mx-auto px-4 md:px-0 mt-28 pb-10">
-        {loading ? (
+        {/* {loading ? (
           <div className="text-center py-10">Loading ...</div>
         ) : (
           <NewsList articles={articles} />
-        )}
+        )} */}
+        {articles.length > 0 ? <NewsList articles={articles} /> : <div  className="text-center py-10">Loading...</div>}
         <Agencies />
         <Contact />
       </main>
